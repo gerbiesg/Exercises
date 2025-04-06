@@ -1,15 +1,13 @@
 :root {
-	--accent-color: #800000; 
+	--accent-color: #800000;
 	--gradient-color: #f6bb73;
 }
 
-/* reset */
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
-
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
@@ -19,16 +17,19 @@ body {
 	max-width: 1024px;
 	margin: auto;
 	border: 2px solid var(--accent-color);
-	background-color: rgba(255,253,237,255); 
+	background-color: rgba(255,253,237,255);
 }
+
 a:hover,
 a:focus {
 	font-style: italic;
 	color: var(--accent-color);
 }
+
 h1, h2, h3, p, ul {
 	padding: 0.25em 0;
 }
+
 h1 {
 	font-size: 150%;
 }
@@ -43,27 +44,33 @@ ul {
 	margin-left: 2em;
 }
 
-
 header {
 	border-bottom: 2px solid var(--accent-color);
-	background-image: linear-gradient(
-		30deg, var(--gradient-color) 0%, white 30%, white 65%, var(--gradient-color) 100%);
+	background-image: linear-gradient(30deg, var(--gradient-color) 0%, white 30%, white 65%, var(--gradient-color) 100%);
 	line-height: 1.2;
 }
+
 header h2 {
 	font-size: 175%;
 	padding: 0.5em 0 0 0;
 }
+
 header h3 {
 	font-size: 130%;
 	font-style: italic;
 	padding-bottom: 1em;
-
 }
-header h3 em.large,
-header h3 sup {
+
+.large,
+sup {
 	text-shadow: 2px 2px 2px rgba(200, 0, 0, 0.6);
 }
+
+.shadow {
+	text-shadow: 2px 2px 2px rgba(200, 0, 0, 0.6);
+	font-size: 125%;
+}
+
 header img {
 	float: left;
 	margin: 0.75em 1em;
@@ -80,6 +87,7 @@ main {
 aside {
 	flex-basis: 25%;
 }
+
 aside img {
 	min-width: 40px;
 	max-width: 75px;
@@ -89,20 +97,34 @@ aside img {
 section {
 	flex-basis: 75%;
 }
+
 section img {
 	float: right;
 	min-width: 100px;
 	max-width: 250px;
 	width: 100%;
+	margin: 0 0 1em 1em;
 }
 
-main blockquote {
+blockquote {
 	font-style: italic;
 	padding-left: 1em;
 }
 
+section.speaker h1 {
+	color: var(--accent-color);
+}
+
+section.speaker h2 {
+	color: black;
+}
+
+section.speaker p {
+	padding: 0.5em 0;
+}
+
 article.featured img {
-	border: 2px solid var(black);
+	border: 2px solid black;
 	border-radius: 0;
 }
 
@@ -115,6 +137,7 @@ article.featured img {
 footer {
 	background-color: var(--accent-color);
 }
+
 footer p {
 	text-align: center;
 	color: white;
@@ -123,4 +146,5 @@ footer p {
 
 .large {
 	font-size: 125%;
+	text-shadow: 2px 2px 2px rgba(200, 0, 0, 0.6);
 }
