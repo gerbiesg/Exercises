@@ -1,6 +1,5 @@
-/* custom property */
 :root {
-	--accent-color: #800000;  /* could also be coded #800 */
+	--accent-color: #800000; 
 	--gradient-color: #f6bb73;
 }
 
@@ -11,7 +10,7 @@
 	box-sizing: border-box;
 }
 
-/* default styles */
+
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: calc(90% + 0.2vw);
@@ -20,7 +19,7 @@ body {
 	max-width: 1024px;
 	margin: auto;
 	border: 2px solid var(--accent-color);
-	background-color: rgba(255,253,237,255); /* Adjust this color to match the background in your photo */
+	background-color: rgba(255,253,237,255); 
 }
 a:hover,
 a:focus {
@@ -44,7 +43,7 @@ ul {
 	margin-left: 2em;
 }
 
-/* the styles for the header */
+
 header {
 	border-bottom: 2px solid var(--accent-color);
 	background-image: linear-gradient(
@@ -59,8 +58,7 @@ header h3 {
 	font-size: 130%;
 	font-style: italic;
 	padding-bottom: 1em;
-	/* Add reddish shadow to the "75th" text within header h3.
-	   This rule targets both the <em> element (with class "large") and the <sup> element inside h3 */
+
 }
 header h3 em.large,
 header h3 sup {
@@ -69,42 +67,35 @@ header h3 sup {
 header img {
 	float: left;
 	margin: 0.75em 1em;
-	/* Logo image sizing */
 	min-width: 40px;
 	max-width: 80px;
 	width: 100%;
 }
 
-/* the styles for the main content */
 main {
 	padding: 0 1em 1em;
 	display: flex;
 }
 
-/* aside: left column (25%) */
 aside {
 	flex-basis: 25%;
 }
 aside img {
-	/* Guest speaker images sizing */
 	min-width: 40px;
 	max-width: 75px;
 	width: 100%;
 }
 
-/* section: right column (75%) */
 section {
 	flex-basis: 75%;
 }
 section img {
-	/* General featured speaker image styling for floating right */
 	float: right;
 	min-width: 100px;
 	max-width: 250px;
 	width: 100%;
 }
 
-/* additional main element styling */
 main blockquote {
 	font-style: italic;
 	padding-left: 1em;
@@ -115,15 +106,12 @@ article.featured img {
 	border-radius: 0;
 }
 
-/* Featured speaker style (applied to <article class="featured">) */
-/* Border-top and border-bottom were copied from the original main h1 rule */
 .featured {
 	border-top: 2px solid var(--accent-color);
 	border-bottom: 2px solid var(--accent-color);
 	padding: 0.5em 0;
 }
 
-/* the styles for the footer */
 footer {
 	background-color: var(--accent-color);
 }
@@ -133,7 +121,6 @@ footer p {
 	padding: 1em 0;
 }
 
-/* CSS class */
 .large {
 	font-size: 125%;
 }
