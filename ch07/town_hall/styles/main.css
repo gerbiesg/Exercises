@@ -130,7 +130,6 @@ footer {
 	font-size: 125%;
 }
 
-/* Navigation Bar Styles */
 .navbar {
     background-color: var(--accent-color);
 }
@@ -144,7 +143,7 @@ footer {
     padding: 1em;
     text-decoration: none;
     color: var(--menu-light);
-    /* Finishing touches: add margins to create space around links */
+
     margin: 0 1px 2px 1px;
 }
 .navbar a:hover,
@@ -154,7 +153,6 @@ footer {
     color: var(--menu-dark);
 }
 
-/* Menu Flexbox Layout */
 .menu {
     display: flex;
     flex-wrap: wrap;
@@ -162,4 +160,37 @@ footer {
 .menu li {
     flex-basis: 20%;
     text-align: center;
+}
+
+.menu li:has(.submenu) {
+    position: relative;
+}
+
+.menu li:has(.submenu) a small {
+    margin-left: 0.5em;
+}
+
+.menu li:has(.submenu):hover .submenu {
+    display: block;
+}
+
+.submenu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: var(--accent-color);
+    color: var(--menu-light);
+    display: none;
+}
+
+.submenu > li a {
+    margin: 0 2px 2px;
+}
+
+.menu > li:first-child a {
+    margin-left: 0;
+}
+
+.menu > li:last-child a {
+    margin-right: 0;
 }
