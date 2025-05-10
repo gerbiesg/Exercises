@@ -168,7 +168,6 @@ footer {
 	& small { margin-left: .25em; }
 }
 
-/* === Mobile-First Adjustments === */
 main {
 	display: flex;
 	flex-direction: column-reverse;
@@ -182,7 +181,6 @@ aside {
 	padding-right: .5em;
 }
 
-/* Hide logo on mobile */
 header {
 	text-align: center;
 }
@@ -190,7 +188,6 @@ header img {
 	display: none;
 }
 
-/* Mobile nav: hamburger menu setup */
 .menu-btn {
 	display: block;
 	background-color: var(--accent-color);
@@ -216,7 +213,6 @@ header img {
 	display: flex;
 }
 
-/* Mobile dropdown fix */
 .dropdown {
 	display: none;
 	position: static;
@@ -232,7 +228,6 @@ header img {
 	padding: 0.75em 1em;
 }
 
-/* === Desktop Enhancement === */
 @media (min-width: 768px) {
 	main {
 		flex-direction: row;
