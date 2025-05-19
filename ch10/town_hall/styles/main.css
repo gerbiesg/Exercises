@@ -265,3 +265,30 @@ footer {
 		}
 	}
 }
+
+section.speaker img {
+  float: none !important;
+  margin: 0 !important;
+}
+
+section.speaker figure {
+  float: right;
+  margin: 0 1em .25em 1em;
+  width: clamp(100px, 100%, 250px);
+  display: block;
+}
+
+section.speaker figure img {
+  display: block;
+  width: 100%;
+}
+
+section.speaker figure figcaption {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 3px solid black;
+  padding-bottom: .25em;
+  margin-top: .5em;
+}
