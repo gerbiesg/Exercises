@@ -1,11 +1,10 @@
 /* custom property */
 :root {
-	--accent-color: #800000;  /* could also be coded #800 */
+	--accent-color: #800000;
 	--gradient-color: #f6bb73;
-
-	--light_menu: white;
-	--mid_menu: antiquewhite;
-	--dark_menu: black;
+	--light_menu:     white;
+	--mid_menu:       antiquewhite;
+	--dark_menu:      black;
 }
 
 /* reset */
@@ -15,9 +14,69 @@
 	box-sizing: border-box;
 }
 
-/* the styles for the table */
+figure#luncheon-schedule {
+  margin: 1.5em 0;
+}
 
+figure#luncheon-schedule h2 {
+  font-size: 120%;
+  margin-bottom: .5em;
+}
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 95%;
+}
+
+th, td {
+  border: none;
+  padding: .6em .8em;
+}
+
+thead tr {
+  border-bottom: 2px solid var(--accent-color);
+}
+tbody tr.divider,
+tfoot tr.divider {
+  border-bottom: 2px solid var(--accent-color);
+}
+
+tbody th[scope="row"] {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: normal;
+}
+
+thead th, tbody td, tfoot td {
+  background: none;
+}
+
+td.bold-label {
+  font-weight: bold;
+}
+
+@media (max-width: 550px) {
+	table, thead, tbody, th, td, tr { display: block; }
+	thead { display: none; }
+
+	tbody tr {
+		margin-bottom: 1em;
+		border: 2px solid var(--accent-color);
+	}
+
+	tbody th[scope="row"],
+	tbody td {
+		border: none;
+		padding: .4em .6em;
+	}
+
+	tbody th[scope="row"] {
+		background: var(--accent-color);
+		color: white;
+	}
+}
 
 /* default styles */
 body {
@@ -72,9 +131,10 @@ header {
 
 /* the styles for the main content */
 main {
-	display: flex;
-	flex-direction: column-reverse;
-	padding: 0 1em 1em;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;          /* ⬅ NEW */
+    padding: 0 1em 1em;
 	& blockquote {
 		font-style: italic;
 		padding-left: 1em;
@@ -208,9 +268,10 @@ footer {
 
 /* media queries */
 @media only screen and (min-width: 922px) {
-	main {
-		flex-direction: row;
-	}
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 	
 	section {
 		flex-basis: 75%;
@@ -238,7 +299,7 @@ footer {
 	#checkbox-toggle:checked ~ .menu { display: flex; }
 
 	.menu li:has(.submenu) {
-		& small::after { content: "\25bc"; }  /* down triangle */
+		& small::after { content: "\25bc"; }
 	}
 	
 	.submenu {
