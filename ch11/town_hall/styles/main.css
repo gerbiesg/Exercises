@@ -133,13 +133,13 @@ header {
 main {
     display: flex;
     flex-direction: column-reverse;
-    flex-wrap: wrap;          /* ⬅ NEW */
+    flex-wrap: wrap;
     padding: 0 1em 1em;
 	& blockquote {
 		font-style: italic;
 		padding-left: 1em;
 	}
-	& h3 + img { /* speaker images */
+	& h3 + img {
 		width: clamp(40px, 50%, 75px);
 		border: 4px double var(--accent-color);
 		border-radius: 10px;
