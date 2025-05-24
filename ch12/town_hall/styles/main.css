@@ -225,6 +225,53 @@ footer {
 	& > li a { margin: 2px; }
 }
 
+input:required:invalid {
+	border: 2px solid red;
+}
+input:valid {
+	border: 1px solid black;
+}
+
+#exp_month,
+#exp_year {
+	width: 49%;
+}
+
+button {
+	font-weight: bold;
+	width: 10em;
+	background-color: var(--accent-color);
+	color: white;
+	border-radius: 6px;
+	padding: .5em;
+	margin-bottom: 1em;
+	border: none;
+}
+button:hover {
+	background-color: var(--gradient-color);
+	color: black;
+	cursor: pointer;
+}
+
+.expiration-group {
+  display: flex;
+  gap: 2%;
+}
+
+.expiration-group > div {
+  flex: 1 1 0;
+}
+
+.expiration-group label,
+.expiration-group select {
+  display: block;
+  width: 100%;
+}
+
+#exp_month,
+#exp_year {
+  width: 100%;
+}
 
 /* media queries */
 @media only screen and (min-width: 922px) {
