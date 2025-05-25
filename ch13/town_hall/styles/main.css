@@ -199,6 +199,13 @@ footer {
 	color: var(--light_menu);
 	display: none;
 	& > li a { margin: 2px; }
+	z-index: 1;
+}
+
+video {
+    width: 90%;
+    max-width: 100%;
+    height: auto;
 }
 
 
